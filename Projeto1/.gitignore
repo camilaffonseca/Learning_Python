@@ -1,0 +1,5 @@
+# ambiente virtual
+venv
+
+# editor de texto
+.theia
