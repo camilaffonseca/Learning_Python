@@ -1,6 +1,10 @@
+# coding: utf-8
 
-n = int(input('Digite um número: '))
-d = n * 2
-t = n * 3
-r = n ** (1 / 2)
-print(f'O dobro de {n} é {d}, o triplo é {t} e a raiz quadrada é {r}')
+
+numero = int(input('Digite um número: '))
+
+dobro = numero * 2
+triplo = numero * 3
+raiz = numero ** (1 / 2)
+
+print(f'O dobro de {numero} é {dobro}, o triplo é {triplo} e a raiz quadrada é {raiz}.')
