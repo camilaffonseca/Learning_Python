@@ -1,9 +1,8 @@
 # coding: utf-8
 
+# Programa que lê um número é mostra o antecessor e o sucessor
+
 
 numero = int(input('Digite um número: '))
 
-antecessor = numero - 1
-sucessor = numero + 1
-
-print(f'O antecessor de {numero} é {antecessor} e o sucessor é {sucessor}')
+print(f'O antecessor de {numero} é {numero - 1} e o sucessor é {numero + 1}')

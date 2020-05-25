@@ -1,5 +1,7 @@
 # coding: utf-8
 
+# Cálculo da quantidade necessária de tinta para pintar uma parede
+
 
 altura = float(input('Altura da parede em metros: '))
 largura = float(input('Largura da parede em metros: '))

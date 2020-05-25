@@ -1,4 +1,6 @@
-# coding utf-8
+# coding: utf-8
+
+# Aluguel de carros
 
 
 distancia = float(input('Distância percorrida em Km: '))

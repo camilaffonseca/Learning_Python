@@ -1,11 +1,9 @@
 # coding: utf-8
 
+# Programa que lê um número é mostra o dobro, o triplo e a raiz quadrada
+
 
 numero = int(input('Digite um número: '))
 
-dobro = numero * 2
-triplo = numero * 3
-raiz = numero ** (1 / 2)
-
-print(f'O dobro de {numero} é {dobro}, o triplo é {triplo} e a \
-raiz quadrada é {raiz}')
+print(f'O dobro de {numero} é {numero * 2} \nO triplo é {numero * 3} \
+\nE a raiz quadrada é {numero ** (1 / 2):.2f}')

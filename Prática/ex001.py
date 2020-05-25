@@ -1,5 +1,7 @@
 # coding: utf-8
 
+# Dissecando uma variável
+
 
 variavel = input('Digite algo: ')
 

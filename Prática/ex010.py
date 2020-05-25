@@ -1,5 +1,7 @@
 # coding: utf-8
 
+# Reajuste salarial
+
 
 salario = float(input('Qual o salário do funcionário em reais? '))
 aumento = float(input('Qual a porcentagem do aumento salarial? '))

@@ -1,5 +1,7 @@
 # coding: utf-8
 
+# Cálculo de desconto
+
 
 preço = float(input('Digite o preço do produto em reais: '))
 

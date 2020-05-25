@@ -1,5 +1,7 @@
 # coding: utf-8
 
+# Tabuada
+
 
 numero = int(input('Digite um número para ver sua tabuada: '))
 
