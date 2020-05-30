@@ -5,4 +5,6 @@
 
 real = float(input('Digite uma quantidade de dinheiro em R$: '))
 
-print(f'R${real} equivale a US${round((real * 5.68), 2)}')
+dolar = round((real * 5.68), 2)
+
+print(f'R${real} equivale a US${dolar}')

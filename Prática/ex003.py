@@ -5,5 +5,9 @@
 
 numero = int(input('Digite um número: '))
 
-print(f'O dobro de {numero} é {numero * 2} \nO triplo é {numero * 3} \
-\nE a raiz quadrada é {numero ** (1 / 2):.2f}')
+dobro = numero * 2
+triplo = numero * 3
+raiz = numero ** (1 / 2):.2f
+
+print(f'O dobro de {numero} é {dobro} \nO triplo é {triplo} \
+\nE a raiz quadrada é {raiz}')
