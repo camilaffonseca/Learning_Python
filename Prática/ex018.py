@@ -2,6 +2,7 @@
 
 # Cálculo da hipotenusa
 
+
 from math import hypot
 
 oposto = float(input('Qual a medida do cateto oposto? '))

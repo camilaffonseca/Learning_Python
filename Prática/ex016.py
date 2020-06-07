@@ -14,6 +14,7 @@ Após o aumento ser realizado, informe na tela:
 - o novo salário, após o aumento.
 ''' 
 
+
 salario = (input('Digite o valor do seu salário: R$'))
 salario = float(salario.replace(',', '.'))
 
