@@ -1,6 +1,9 @@
 # coding: utf-8
 
-# Faça um programa que leia o nemo de uma cidade e verifique se ela começa com a palavra Santo
+'''
+Faça um programa que leia o nome de uma cidade e
+verifique se ela começa com a palavra Santo
+'''
 
 
 cidade = str(input('Digite o nome da cidade: ')).strip()
