@@ -9,12 +9,11 @@ Seu programa também deverá mostrar o tempo que falta ou que passou do prazo.
 
 from datetime import date
 
-def dif(idade):
+def dif(idade) -> int:
     if idade < 18:
-        dif = 18 - idade
+        return 18 - idade
     else:
-        dif = idade - 18
-    return dif
+        return idade - 18
 
 ano_nascimento = int(input('Qual o ano do seu nascimento? \n> '))
 ano_atual = date.today().year

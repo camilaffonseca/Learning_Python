@@ -1,14 +1,27 @@
 # coding: utf-8
 
-# Triângulos
+# Classificação dos triângulos
 
+def ident_triangulos(segmento1, segmento2, segmento3) -> str:
+    '''Identifica o tipo de triângulo com base nos seus lados.
+    
+    Com base na relação dos seus lados, retorna EQUILÁTERO,
+    ESCALENO ou ISÓSCELES.
+    '''
 
-reta1 = float(input('Primeira reta: '))
-reta2 = float(input('Segunda reta: '))
-reta3 = float(input('Terceira reta: '))
+    if seg1 == seg2 and seg1 == seg3:
+        return 'EQUILÁTERO'
+    elif seg1 != seg2 and seg1 != seg3 and seg2 != seg3:
+        return 'ESCALENO'
+    else:
+        return 'ISÓSCELES'
 
-if reta1 < reta2 + reta3 and reta2 < reta1 + reta3 and reta3 < reta1 + reta2:
-    print('Os segmentos acima podem formar um triângulo')
+seg1 = float(input('Primeira reta: '))
+seg2 = float(input('Segunda reta: '))
+seg3 = float(input('Terceira reta: '))
+
+if seg1 < seg2 + seg3 and seg2 < seg1 + seg3 and seg3 < seg1 + seg2:
+    print('Os segmentos acima podem formar um triângulo '
+          f'{ident_triangulos(seg1, seg2, seg3)}')
 else:
     print('Os segmentos acima não podem formar um triângulo')
-    
