@@ -1,7 +1,3 @@
-# Learning Python
-
-<br />
-
 <p align="center">
     <img
         src="https://raw.githubusercontent.com/camilaffonseca/Learning_Python/master/python-logo.png" 
@@ -9,6 +5,18 @@
         alt="Python Logo"
     />
 </p>
+
+<p align="center">
+    <img src="https://img.shields.io/github/license/camilaffonseca/Learning_Python" />
+</p>
+
+<br />
+
+# Learning Python
+
+**Learning Python** é um projeto destinado ao aprendizado e prática da linguagem Python, arquitetura de software e suas tecnologias.
+
+<br />
 
 ## Author
 
