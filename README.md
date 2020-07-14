@@ -1,14 +1,14 @@
-# Learnig Python
+# Learning Python
 
 <br />
 
-<!-- 
-
-p align="center"
-    img
-/p
-
--->
+<p align="center">
+    <img
+        src="https://raw.githubusercontent.com/camilaffonseca/Learning_Python/master/python-logo.png" 
+        width="200px"
+        alt="Python Logo"
+    />
+</p>
 
 ## Author
 
