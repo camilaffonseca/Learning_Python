@@ -3,3 +3,5 @@ venv
 
 # editor de texto
 .theia
+
+autopush.bat
