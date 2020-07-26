@@ -23,7 +23,7 @@ def realocar_espaços(frase):
     lista_caracteres_invertidos = []
 
     for índice in frase_sem_espaços_invertida:
-        lista_caracteres_invertidos.append(índice) ##
+        lista_caracteres_invertidos.append(índice)
 
     indice_anterior = 0
     lista_separada_por_palavras_invertidas = []
