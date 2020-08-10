@@ -27,3 +27,5 @@ while quantidade_termos != 0:
         c += 1
         
     quantidade_termos = int(input('\nQuantos termos você quer mostrar a mais? '))
+
+print(f'Progressão finalizada com {total} termos mostrados')
