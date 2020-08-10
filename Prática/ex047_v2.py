@@ -14,7 +14,7 @@ print('Os 10 primeiros termos da progressão são...')
 
 c = 1
 while c <= 10:
-    print(f'| {termo}', end = ' ')
+    print(f'| {termo} ', end='')
     termo += razão 
     c += 1
 

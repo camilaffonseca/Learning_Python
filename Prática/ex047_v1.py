@@ -13,7 +13,7 @@ razão = int(input('Razão: '))
 print('Os 10 primeiros termos da progressão são...')
 
 for c in range(0, 10):
-    print(termo1, end=' | ')
+    print(f'{termo1} | ', end='')
     termo1 += razão
 
 print('...')

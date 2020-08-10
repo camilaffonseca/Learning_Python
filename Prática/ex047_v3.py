@@ -22,7 +22,7 @@ while quantidade_termos != 0:
     
     while c <= total:
         
-        print(f'| {termo}', end = ' ')
+        print(f'| {termo} ', end='')
         termo += razão
         c += 1
         
