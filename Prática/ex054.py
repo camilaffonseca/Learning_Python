@@ -8,7 +8,6 @@ ao usuário se ele quer ou não continuar a digitar valores.
 '''
 
 
-
 soma = c = 0
 maior = menor = 0
 opção = 'S'
@@ -29,7 +28,6 @@ while opção[:1] == 'S':
             menor = valor
 
     opção = input('Continuar? ').upper()
- 
 
 print(f'\nMédia: {soma / c}'
       f'\nMaior: {maior}'
