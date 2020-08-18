@@ -1,34 +1,59 @@
 # coding: utf-8
 
 '''
-Desenvolva um programa que leia o nome, idade e sexo de 4 pessoas.
-No final do programa, mostre: a média de idade do grupo, qual é o nome
-do homem mais velho e quantas mulheres têm menos de 20 anos.
+Crie um programa que leia dois valores e mostre um menu na tela:
+
+[1] somar
+[2] multiplicar
+[3] maior
+[4] novos números
+[5] sair do programa
+
+Seu programa deverá realizar a operação solicitada em cada caso.
 '''
 
-soma_idades = 0
-idade_homem_mais_velho = 0
-nome_homem_mais_velho = ''
-cont_mulheres = 0
-for p in range(1, 5):
-    
-    print(f'Pessoa {p}')
-    
-    nome = input('Nome: ')
-    idade = int(input('Idade: '))
-    sexo = input('Sexo (M/F): ').upper()
-    
-    soma_idades += idade
-    
-    if sexo == 'M':
-        if idade > idade_homem_mais_velho:
-            idade_homem_mais_velho = idade
-            nome_homem_mais_velho = nome
+from sys import exit as sair
 
-    if sexo == 'F':
-        if idade < 20:
-            cont_mulheres += 1
+numero1 = float(input('Primeiro número: '))
+numero2 = float(input('Segundo número: '))
 
-print(f'A média de idades é {soma_idades/4}'
-      f'\nO homem mais velho é {nome_homem_mais_velho}, com {idade_homem_mais_velho} anos'
-      f'\nMulheres com menos de 20 anos: {cont_mulheres}')
+menu = ('\n[1] Somar'
+        '\n[2] Multiplicar'
+        '\n[3] Mostrar qual é o maior'
+        '\n[4] Substituir os números'
+        '\n[5] Mostrar menu novamente'
+        '\n[6] Sair do programa')
+
+print(menu)
+
+while True:
+    
+    operação = input('\nOperação: ')
+
+    if operação == '1':
+        resultado = numero1 + numero2
+    
+    elif operação == '2':
+        resultado = numero1 * numero2
+    
+    elif operação == '3':
+        if numero1 > numero2:
+            resultado = numero1
+        else:
+            resultado = numero2
+    
+    elif operação == '4':
+        numero1 = float(input('Primeiro número: '))
+        numero2 = float(input('Segundo número: '))
+    
+    elif operação == '5':
+        print(menu)
+    
+    elif operação == '6':
+        sair()
+    
+    else:
+        print(f'\nOperação inválida... \n{menu}')
+    
+    if operação in '1236':
+        print(f'\nResultado: {resultado}')

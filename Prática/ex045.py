@@ -1,8 +1,16 @@
 # coding: utf-8
 
-# upgrade ex006
+'''
+Desenvolva um programa que leia seis números inteiros e mostre a soma apenas
+daqueles que forem pares. Se o valor digitado for ímpar, desconsidere-o.
+'''
 
-num = int(input('Digite um número para ver sua tabuada: '))
+soma = 0
+cont = 0
+for c in range(1, 7):
+    num = int(input(f'Número {c}: '))
+    if num % 2 == 0:
+        soma += num
+        cont += 1
 
-for c in range(1, 11):
-    print(f'{num} X {c :2} = {num * c}')
+print(f'A soma dos {cont} números pares é {soma}.')
