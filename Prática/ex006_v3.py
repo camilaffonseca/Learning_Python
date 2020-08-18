@@ -7,6 +7,7 @@ o número solicitado for 0.
 '''
 
 número = None
+
 while True:
 
     print('\n- Tabuada -')
