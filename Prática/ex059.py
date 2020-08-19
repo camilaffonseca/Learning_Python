@@ -12,7 +12,6 @@ C) quantas mulheres tem menos de 20 anos.
 pessoas_18 = 0
 homens = 0
 mulheres_20 = 0
-opção = 'N'
 
 while True:
     
