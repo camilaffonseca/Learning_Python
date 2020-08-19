@@ -6,7 +6,6 @@ Depois disso, você deve mostrar, para cada palavra, quais são as suas vogais.
 '''
 
 
-palavras = ()
 opção_continuar = ' '
 vogais = ['a', 'e', 'i', 'o', 'u']
 
