@@ -38,15 +38,17 @@ while True:
         mulheres_20 += 1
 
     opção = ' '
-    while opção not in 'NS':
+
+    while True:
         opção = input('Continuar? ').upper()[0]
+        if opção in 'NS':
+            break
+        else:
+            print('Resposta inválida! \nResponda com SIM ou NÃO...')
+
     if opção == 'N':
         break
 
 print(f'\nPessoas acima de 18 anos: {pessoas_18}'
       f'\nHomens cadastrados: {homens}'
       f'\nMulheres abaixo de 20 anos: {mulheres_20}')
-    
-    
-
-
