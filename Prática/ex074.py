@@ -63,7 +63,8 @@ for pessoa in pessoas:
     if pessoa[1] == menor_peso:
         pessoas_menor_peso.append(pessoa[0])
 
-
-print(len(pessoas), ' pessoas foram cadastradas',
-      '\nPessoas mais leves: ', ' | '.join(map(str, pessoas_menor_peso)),
-      '\nPessoas mais pesadas: ', ' | '.join(map(str, pessoas_maior_peso)))
+print(f'''
+{len(pessoas)} pessoas foram cadastradas
+Pessoas mais leves: {' | '.join(map(str, pessoas_menor_peso))} [{menor_peso} Kg]
+Pessoas mais pesadas: {' | '.join(map(str, pessoas_maior_peso))} [{maior_peso} Kg]
+''') if maior_peso != menor_peso else print('As pessoas têm o mesmo peso')
