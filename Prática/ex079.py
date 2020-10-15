@@ -81,7 +81,7 @@ while True:
     if opção_aluno == '0':
         break
 
-    if opção_aluno.isnumeric() == False:
+    if opção_aluno.isnumeric() is False: # TODO
         for indice, aluno in enumerate(lista_alunos):
             if opção_aluno.upper() == aluno[0].upper():
                 opção_aluno = indice + 1
@@ -89,6 +89,6 @@ while True:
 
     try:
         print(f'Al {lista_alunos[int(opção_aluno) - 1][0]} | ',
-            ' | '.join(map(str, lista_alunos[int(opção_aluno) - 1][1])))
+              ' | '.join(map(str, lista_alunos[int(opção_aluno) - 1][1])))
     except Exception:
         print(f'O aluno {opção_aluno} não foi encontrado na lista.')
