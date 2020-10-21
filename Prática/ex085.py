@@ -13,27 +13,49 @@ c) uma contagem personalizada
 from time import sleep
 
 def contador(início, fim, passo = 1):
-    if início > fim:
-        while início >= fim:
-            print(f'| {início:^5} |', end='', flush=True)
-            sleep(0.7)
-            início -= passo
-    elif início < fim:
-        while início <= fim:
-            print(f'| {início:^5} |', end='', flush=True)
-            sleep(0.7)
-            início += passo
-    else:
-        print('O início e o fim não podem ter o mesmo valor, '
-              'senão não consigo fazer a contagem, bocó :)')
+    if passo == 0:
+        passo = 1
 
-print('\nContagem de 1 a 10, com passo 1...')
+    if passo < 0:
+        passo *= -1
+
+    if início > fim:
+        print(f'\n\nContagem de {início} até {fim}, com passo {passo}...\n')
+
+        while início >= fim:
+            print(
+                f'| {início:^5} |',
+                end='',
+                flush=True
+            )
+
+            sleep(0.7)
+
+            início -= passo
+
+    elif início < fim:
+        print(f'\n\nContagem de {início} até {fim}, com passo {passo}...\n')
+
+        while início <= fim:
+            print(
+                f'| {início:^5} |',
+                end='',
+                flush=True
+            )
+
+            sleep(0.7)
+
+            início += passo
+
+    else:
+        print('\nO início e o fim não podem ter o mesmo valor, '
+              'senão não consigo fazer a contagem, bocó :)\n')
+
 contador(1, 10)
 
-print('\nContagem de 10 a 0, com passo 2...')
 contador(10, 0, 2)
 
-print('\nAgora é a sua vez de personalizar a contagem :)\n')
+print('\n\nAgora é a sua vez de personalizar a contagem :)\n')
 
 início = int(input('Início: '))
 fim = int(input('Fim: '))
