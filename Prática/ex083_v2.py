@@ -11,7 +11,7 @@ jogadores = []
 while True:
     jogador = {}
 
-    jogador['nome'] = input('Nome: ')
+    jogador['nome'] = input('Nome: ').title()
     jogador['partidas'] = int(input('Jogou quantas partidas? '))
 
 
@@ -42,3 +42,26 @@ for jogador in jogadores:
         f'{jogador["total_gols"]}'.center(10),
         sep=' | '
     )
+
+valid = None
+
+while True:
+    opção_jogador = input('Mostrar dados de qual jogador? [0 p/ parar] > ').title()
+
+    if opção_jogador == '0':
+        break
+
+    for jogador in jogadores:
+        if opção_jogador == jogador['nome']:
+            print(jogador['nome'],
+                  ', '.join(map(str, jogador['gols_partida'])),
+                  jogador['total_gols'],
+                  sep=' | ')
+            valid = True
+            break
+        else:
+            valid = False
+    
+    if valid is False:
+        print(f'Jogador {opção_jogador} não encontrado')
+    
