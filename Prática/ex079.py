@@ -8,6 +8,11 @@ mostrar as notas de cada aluno individualmente.
 '''
 
 
+def list_to_str(list):
+    return ' | '.join(map(str, list))
+
+
+
 lista_alunos = []
 c = 0
 
@@ -67,12 +72,12 @@ for aluno in lista_alunos:
 
     aluno.append(média)
 
-print('BOLETIM'.center(46, '-'))
+print('BOLETIM'.center(44, '-'))
 
 for indice, aluno in enumerate(lista_alunos):
-    print(f'Nº {indice + 1 :^6}',
-          f'Al {aluno[0] :^15}',
-          f'Média {aluno[-1] :^8}',
+    print(f'Nº {indice + 1}'.center(6),
+          f'Al {aluno[0]}'.center(15),
+          f'Média {aluno[-1]:.2f}'.center(8),
           sep=' | ')
 
 while True:
@@ -89,6 +94,6 @@ while True:
 
     try:
         print(f'Al {lista_alunos[int(opção_aluno) - 1][0]} | ',
-              ' | '.join(map(str, lista_alunos[int(opção_aluno) - 1][1])))
+              list_to_str(lista_alunos[int(opção_aluno) - 1][1]))
     except Exception:
         print(f'O aluno {opção_aluno} não foi encontrado na lista.')
