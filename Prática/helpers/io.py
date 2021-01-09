@@ -54,65 +54,65 @@ QUESTION_TYPES = {
         'processors': []
     },
     'age': {
-        'input_message': 'Qual a sua idade? > ',
-        'error_message': 'Idade invalida. Tente novamente.',
+        'input_message': 'Age: \n> ',
+        'error_message': 'Invalid age. Try again.',
         'cast': int,
         'validations': {
             'binary_validations': [_is_numeric, _is_number_int, _is_positive_number],
             'controlled_validations': [
                 {'validator': _max_length, 'control_value': 3},
                 {'validator': _max_value_int, 'control_value': 130},
-            ],
+            ]
         },
         'processors': []
     },
     'name': {
-        'input_message': 'Nome > ',
-        'error_message': 'Valor inválido. Tente novamente.',
+        'input_message': 'Name: \n> ',
+        'error_message': 'Invalid name. Try again.',
         'cast': str,
         'validations': {
             'binary_validations': [],
-            'controlled_validations': [],
+            'controlled_validations': []
         },
         'processors': [
-            {'processor': _process_to_title_string},
+            {'processor': _process_to_title_string}
         ]
     },
     'gender': {
-        'input_message': 'Sexo: [M/F] > ',
-        'error_message': 'Valor inválido. Tente novamente.',
+        'input_message': 'Gender: \n> ',
+        'error_message': 'Invalid information. Try again.',
         'cast': str,
         'validations': {
             'binary_validations': [],
             'controlled_validations': [
-                {'validator': _is_in_options, 'control_value': ['F', 'M']},
-            ],
+                {'validator': _is_in_options, 'control_value': ['F', 'M']}
+            ]
         },
         'processors': [
-            {'processor': _process_upper},
+            {'processor': _process_upper}
         ]
     },
     'continue': {
-        'input_message': 'Continuar: [S/N] > ',
-        'error_message': 'Valor inválido. Tente novamente.',
+        'input_message': 'Continue? \n> ',
+        'error_message': 'Invalid option. Try again.',
         'cast': str,
         'validations': {
             'binary_validations': [],
             'controlled_validations': [
-                {'validator': _is_in_options, 'control_value': ['S', 'N']},
-            ],
+                {'validator': _is_in_options, 'control_value': ['S', 'N']}
+            ]
         },
         'processors': [
-            {'processor': _process_upper},
+            {'processor': _process_upper}
         ]
     },
     'int': {
-        'input_message': 'Digite um valor inteiro > ',
-        'error_message': 'Valor inválido. Tente novamente.',
+        'input_message': 'Type an integer number: \n> ',
+        'error_message': 'Invalid value. Try again.',
         'cast': int,
         'validations': {
             'binary_validations': [_is_numeric, _is_number_int],
-            'controlled_validations': [],
+            'controlled_validations': []
         },
         'processors': []
     },
@@ -124,7 +124,7 @@ def type_input(
         input_message='',
         error_message='',
         cast=None,
-        validation_funtions=[],
+        validation_functions=[],
         extends_validations=True,
         processors_functions=[],
         extends_processors=True):
@@ -140,8 +140,7 @@ def type_input(
 
             if extends_processors is True:
                 for processor in QUESTION_TYPES[get_type]['processors']:
-                    value_pre_processors = processor['processor'](
-                        value_pre_processors)
+                    value_pre_processors = processor['processor'](value_pre_processors)
 
             if processors_functions:
                 for processor in processors_functions:
@@ -158,8 +157,8 @@ def type_input(
                     if validation_schema['validator'](value_post_processors, validation_schema['control_value']) is False:
                         raise Exception
 
-            if validation_funtions:
-                for validation_function in validation_funtions:
+            if validation_functions:
+                for validation_function in validation_functions:
                     if validation_function(value_post_processors) is False:
                         raise Exception
 
