@@ -11,6 +11,8 @@ c) uma contagem personalizada
 
 
 from time import sleep
+from helpers.io import type_input
+
 
 def contador(início, fim, passo = 1):
     if passo == 0:
@@ -57,7 +59,7 @@ contador(10, 0, 2)
 
 print('\n\nAgora é a sua vez de personalizar a contagem :)\n')
 
-início = int(input('Início: '))
+início = type_input(get_type='int', input_message='Início: ')
 fim = int(input('Fim: '))
 passo = int(input('Passo: '))
 

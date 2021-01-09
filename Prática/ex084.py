@@ -11,18 +11,21 @@ D) Uma lista de pessoas com idade acima da média
 '''
 
 
+from helpers.io import type_input
+
+
 pessoas = []
 
 while True:
     pessoa = {}
 
-    pessoa['nome'] = input('Nome: ')
-    pessoa['sexo'] = input('Sexo: [M/F] > ').upper()[0]
-    pessoa['idade'] = int(input('Idade: '))
+    pessoa['nome'] = type_input('name')
+    pessoa['sexo'] = type_input('gender')
+    pessoa['idade'] = type_input('age')
 
     pessoas.append(pessoa)
 
-    opção_continuar = input('Continuar? [S/N] > ').upper()[0]
+    opção_continuar = type_input('continue')
 
     if opção_continuar == 'N':
         break
