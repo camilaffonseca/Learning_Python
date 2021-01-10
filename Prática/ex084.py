@@ -49,9 +49,11 @@ for pessoa in pessoas:
     if pessoa['idade'] > média_idades:
         idade_acima_média.append(pessoa['nome'].title())
 
-
-print(f'Foram cadastradas {len(pessoas)} pessoas\n'
-      f'Média de idade: {média_idades :.2f}')
+if len(pessoas) > 1: 
+    print(f'Foram cadastradas {len(pessoas)} pessoas\n'
+          f'Média de idade: {média_idades :.2f}')
+else:
+    print(f'Foi cadastrada 1 pessoa')
 
 if mulheres:
     print(

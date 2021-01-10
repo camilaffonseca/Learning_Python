@@ -21,7 +21,7 @@ def _is_numeric(element):
 
 
 def _is_positive_number(element):
-    return element > 0
+    return float(element) > 0
 
 
 def _is_number_int(element):
@@ -79,7 +79,7 @@ QUESTION_TYPES = {
         ]
     },
     'gender': {
-        'input_message': 'Gender: \n> ',
+        'input_message': 'Gender: (F/M) \n> ',
         'error_message': 'Invalid information. Try again.',
         'cast': str,
         'validations': {
@@ -93,13 +93,13 @@ QUESTION_TYPES = {
         ]
     },
     'continue': {
-        'input_message': 'Continue? \n> ',
+        'input_message': 'Continue? (Y/N) \n> ',
         'error_message': 'Invalid option. Try again.',
         'cast': str,
         'validations': {
             'binary_validations': [],
             'controlled_validations': [
-                {'validator': _is_in_options, 'control_value': ['S', 'N']}
+                {'validator': _is_in_options, 'control_value': ['Y', 'N']}
             ]
         },
         'processors': [
